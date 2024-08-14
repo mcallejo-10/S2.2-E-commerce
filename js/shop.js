@@ -77,12 +77,20 @@ var total = 0;
 // Exercise 1
 function buy(id) {
     // 1. Loop for to the array products to get the item to add to cart
+    let itemIndex = products.findIndex(item => item.id === id);
+    let itemToAdd = products[itemIndex];
+
     // 2. Add found product to the cart array
+    let itemCartIndex = cart.findIndex(item => item.id === id)
+    if (cart.length < 1 ||  itemCartIndex < 0) {
+        itemToAdd.quantity = 1;
+        cart.push(itemToAdd);
+    } else cart[itemCartIndex].quantity++;
 }
 
 // Exercise 2
 function cleanCart() {
-
+    cart.splice(0);
 }
 
 // Exercise 3
