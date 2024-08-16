@@ -55,13 +55,13 @@ var products = [
     name: "Lawn-Chiffon Combo",
     price: 19.99,
     type: "clothes",
-},
-{
+  },
+  {
     id: 9,
     name: "Toddler Frock",
     price: 9.99,
     type: "clothes",
-},
+  },
 ];
 
 // => Reminder, it's extremely important that you debug your code.
@@ -92,8 +92,8 @@ function buy(id) {
 
 // Exercise 2
 function cleanCart() {
-  cart.splice(0);  
-  cartList.innerHTML = "";  
+  cart.splice(0);
+  cartList.innerHTML = "";
   totalPrice.innerHTML = "0";
 }
 
@@ -139,10 +139,11 @@ function printCart() {
     <td>${item.price}</td>
     <td>${item.quantity}</td>
     <td>${item.subtotalWithDiscount.toFixed(2)}</td>
+    <td onclick="removeFromCart(${
+      item.id
+    })" class="btn btn-danger btn-sm">Remove</td>
     `;
     cartList.appendChild(newItemRow);
-    console.log(item.subtotalWithDiscount);
-
     total += item.subtotalWithDiscount;
   });
   totalPrice.innerHTML = `${total.toFixed(2)}`;
@@ -151,7 +152,16 @@ function printCart() {
 // ** Nivell II **
 
 // Exercise 7
-function removeFromCart(id) {}
+function removeFromCart(id) {
+  let removedItem = cart.find((element) => element.id == id);
+  if (removedItem.quantity > 1) {
+    removedItem.quantity--;
+  } else if (removedItem.quantity == 1) {
+    let index = cart.findIndex((element) => element.id == id);
+    cart.splice(index, 1);
+  }
+  printCart();
+}
 
 function open_modal() {
   printCart();
