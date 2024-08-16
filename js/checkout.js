@@ -1,5 +1,6 @@
 // Exercise 6
-function validate() {
+function validate(event) {
+  event.preventDefault()
   var error = 0;
   // Get the input fields
   var fName = document.getElementById("fName");
@@ -68,8 +69,11 @@ function validate() {
   }
 
   if (error > 0) {
-    alert("Error");
+    alert("Error: ");
   } else {
     alert("OK");
+    window.location.href = "index.html";
+
   }
+
 }

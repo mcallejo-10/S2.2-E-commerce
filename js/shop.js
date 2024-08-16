@@ -75,6 +75,8 @@ var cart = [];
 var total = 0;
 var cartList = document.getElementById("cart_list");
 var totalPrice = document.getElementById("total_price");
+var totalItems = document.getElementById("count_product");
+var totalItemsCart = 0;
 
 // Exercise 1
 function buy(id) {
@@ -87,7 +89,11 @@ function buy(id) {
   if (cart.length < 1 || itemCartIndex < 0) {
     itemToAdd.quantity = 1;
     cart.push(itemToAdd);
-  } else cart[itemCartIndex].quantity++;
+  } else {
+    cart[itemCartIndex].quantity++;
+  }
+  totalItemsCart++;
+  totalItems.innerHTML = totalItemsCart;
 }
 
 // Exercise 2
@@ -95,6 +101,8 @@ function cleanCart() {
   cart.splice(0);
   cartList.innerHTML = "";
   totalPrice.innerHTML = "0";
+  totalItemsCart = 0;
+  totalItems.innerHTML = totalItemsCart;
 }
 
 // Exercise 3
@@ -160,6 +168,8 @@ function removeFromCart(id) {
     let index = cart.findIndex((element) => element.id == id);
     cart.splice(index, 1);
   }
+  totalItemsCart--;
+  totalItems.innerHTML = totalItemsCart;
   printCart();
 }
 
