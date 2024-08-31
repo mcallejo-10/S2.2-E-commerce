@@ -1,12 +1,11 @@
 # S2.2-E-commerce
 
 ## Descripción
-
-Demo de una aplicación web para una empresa que permite la compra de sus productos a través de internet.
+Este proyecto es una versión inicial de demostración de una aplicación web de comercio electrónico solicitada por una empresa del sector e-commerce. La aplicación permite a los usuarios comprar productos a través de internet, gestionar su carrito de la compra, y aplicar promociones al precio final.
 
 <br>
 
-## Tecnologias utilizadas
+## Tecnologías utilizadas
 
  - Javascript 
  - HTML
