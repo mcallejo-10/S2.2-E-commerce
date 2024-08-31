@@ -1996,14 +1996,14 @@ progress {
 }
 
 .table-bordered > :not(caption) > * {
-  border-width: 1px 0;
+  border-width: 1px 1px;
 }
 .table-bordered > :not(caption) > * > * {
-  border-width: 0 1px;
+  border-width: 1px 1px;
 }
 
 .table-borderless > :not(caption) > * > * {
-  border-bottom-width: 0;
+  border-bottom-width: 1px;
 }
 .table-borderless > :not(:first-child) {
   border-top-width: 0;
@@ -2193,7 +2193,7 @@ progress {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #f9ebe4;
   background-clip: padding-box;
   border: 1px solid #ced4da;
   -webkit-appearance: none;
@@ -3179,13 +3179,13 @@ textarea.form-control-lg {
 }
 
 .btn-danger {
-  color: #fff;
-  background-color: #dc3545;
-  border-color: #dc3545;
+  color: #ffffff;
+  background-color: #ec9ea69f;
+  border-color: #8f252f;
 }
 .btn-danger:hover {
   color: #fff;
-  background-color: #bb2d3b;
+  background-color: #b44b56;
   border-color: #b02a37;
 }
 .btn-check:focus + .btn-danger, .btn-danger:focus {
@@ -3487,9 +3487,15 @@ textarea.form-control-lg {
 }
 
 .btn-sm, .btn-group-sm > .btn {
-  padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
+  padding: 0.1rem 0.1rem;
+  display: flex;              
+  align-items: center;
+  justify-content: center;
+  font-size: 0.775rem;
   border-radius: 0.2rem;
+  width: 70px;  
+  height: 30px;
+  line-height: 30px; 
 }
 
 .fade {
@@ -3897,10 +3903,10 @@ textarea.form-control-lg {
   margin-right: 0;
 }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
-  padding-right: 0.375rem;
-  padding-left: 0.375rem;
-}
+/* .btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split {
+  padding-right: 0.275rem;
+  padding-left: 0.275rem;
+} */
 
 .btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split {
   padding-right: 0.75rem;
@@ -4036,6 +4042,8 @@ textarea.form-control-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   color: #184e4b;
+  border-bottom: 2px solid #184e4b;
+
  }
 
 .navbar > .container,

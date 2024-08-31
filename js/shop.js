@@ -151,7 +151,7 @@ function printCart() {
     <td>${item.subtotalWithDiscount.toFixed(2)}</td>
     <td onclick="removeFromCart(${
       item.id
-    })" class="btn btn-danger btn-sm">Remove</td>
+    })" class="btn btn-danger btn-sm mt-1">Remove</td>
     `;
     cartList.appendChild(newItemRow);
     total += item.subtotalWithDiscount;

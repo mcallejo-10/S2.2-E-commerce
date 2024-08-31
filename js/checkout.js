@@ -20,7 +20,7 @@ function validate(event) {
 
   var minThreeLettersRegex = /^[a-zA-Z]{3,}$/;
   var emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-  var phoneRegex = /^\d{3,}$/;
+  var phoneRegex = /^\d{9,}$/;
   var passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z\d]{3,}$/;
   var addressRegex = /^[a-zA-Z0-9._%+-\s]{3,}$/;
 
